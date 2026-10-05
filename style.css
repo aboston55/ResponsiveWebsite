@@ -53,7 +53,8 @@
     --color-text-dark: var(--c-gray-dark);
     --color-text-light: var(--c-white);
     --color-background: var(--c-purple);
-    --color-buttonprimary-bg: var(--c-teal);
+    --color-header-bg: var(--c-purple);
+    --color-hero-bg: var(--c-teal);
     --color-buttonprimary-text: var(--c-gray-dark);
     --color-buttonsecondary-bg: var(--c-transparent);
     --color-buttonsecondary-border: var(--c-white);
@@ -113,6 +114,30 @@
 }
 
 @layer component {
+  .topnav {
+    background-color: var(--color-header-bg);
+    .topnav__homelink {
+    }
+
+    .topnav__logo {
+    }
+
+    .topnav__links {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .topnav__item {
+    }
+
+    .topnav__link {
+      font-size: var(--font-size-topnav);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--color-text-light);
+    }
+  }
 }
 
 @layer utility {
@@ -123,5 +148,14 @@
     width: 1px;
     height: 1px;
     overflow: hidden;
+
+    &.skip:focus {
+      left: 0;
+      width: auto;
+      height: auto;
+      background: #fff;
+      padding: 10px;
+      border: 1px solid;
+    }
   }
 }
